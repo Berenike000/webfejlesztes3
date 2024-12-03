@@ -65,35 +65,35 @@ const kiiras = [];
 let kellrandom = false;
 
 function konyvajanlas(){
+  if(sorozate==true){
 
-  if(sorozate){
-      if(kortarse){
+      if(kortarse == true){
         //sorozat és kortárs is 
           if(humorose >= 7){
             //RANDOM SZAM
             kellrandom = true;
           }
           else{
-            if(ai && tudomanyos && posztapok && uropera) {
+            if(ai==true && tudomanyos==true && posztapok==true && uropera==true) {
               if(!(eredmeny.includes(2))){eredmeny.push(2)}}
 
-            if(uropera && urutazas){
+            if(uropera==true && urutazas==true){
               if(!(eredmeny.includes(4))){eredmeny.push(4)}}
   
-            if(ufo && krimi){
+            if(ufo==true && krimi==true){
               if(!(eredmeny.includes(6))){eredmeny.push(6)}}
             
-            if(disztopia && ai && krimi){
+            if(disztopia==true && ai==true && krimi==true){
               if(!(eredmeny.includes(7))){eredmeny.push(7)}} 
             
-            if(disztopia && posztapok){
+            if(disztopia==true && posztapok==true){
               if(!(eredmeny.includes(12))){eredmeny.push(12)}
               if(!(eredmeny.includes(16))){eredmeny.push(16)}}
 
-            if(idoutazas){
+            if(idoutazas==true){
               if(!(eredmeny.includes(13))){eredmeny.push(13)}}
                   
-            if(disztopia && posztapok && tarskritika){
+            if(disztopia==true && posztapok==true && tarskritika==true){
               if(!(eredmeny.includes(17))){eredmeny.push(17)}}
           }
       }
@@ -103,28 +103,28 @@ function konyvajanlas(){
           eredmeny.push(11)
         }
         else{
-          if(uropera) {
+          if(uropera==true) {
             if(!(eredmeny.includes(5))){eredmeny.push(5)}}
 
-          if(ai && uropera && urutazas){
+          if(ai==true && uropera==true && urutazas==true){
             if(!(eredmeny.includes(8))){eredmeny.push(8)}}
 
-          if(tarskritika){
+          if(tarskritika==true){
             if(!(eredmeny.includes(9))){eredmeny.push(9)}}
 
-          if(ufo && urutazas){
+          if(ufo==true && urutazas==true){
             if(!(eredmeny.includes(11))){eredmeny.push(11)}}
         }
       }
   }
   else{
-    if(kortarse){
+    if(kortarse==true){
       //nem sorozat, de kortárs
       if(humorose >= 7){
         eredmeny.push(3)
       }
       else{
-        if(urutazas) {
+        if(urutazas==true) {
           if(!(eredmeny.includes(3))){eredmeny.push(3)}}
       }
 
@@ -136,17 +136,17 @@ function konyvajanlas(){
         kellrandom = true;
       }
       else{
-        if(disztopia && idoutazas) {
+        if(disztopia==true && idoutazas==true) {
           if(!(eredmeny.includes(0))){eredmeny.push(0)}}
 
-          if(disztopia && tarskritika){
+          if(disztopia==true && tarskritika==true){
             if(!(eredmeny.includes(1))){eredmeny.push(1)}
             if(!(eredmeny.includes(10))){eredmeny.push(10)}}
 
-        if(krimi){
+        if(krimi==true){
           if(!(eredmeny.includes(14))){eredmeny.push(14)}}
 
-        if(posztapok && disztopia){
+        if(posztapok==true && disztopia==true){
           if(!(eredmeny.includes(15))){eredmeny.push(15)}}
       }
     }
@@ -163,8 +163,8 @@ function konyvajanlas(){
       kiiras = kiiras + lista[eredmeny[i]] + descriptionlista[eredmeny[i]]
     }
   }
-
-  document.getElementById("konyvajanlas").value = kiiras
+document.getElementById("konyvajanlaskiiras").innerHTML= "xxxxxx"
+  document.getElementById("konyvajanlaskiiras").innerHTML = kiiras
 
 }
 

@@ -110,7 +110,6 @@ footer {
 /*DROPDOWN MENU*/
 .menu{
     position: relative;
-    
 }
 
 .lenyiltmenu{
@@ -129,7 +128,6 @@ footer {
     border-radius: 20px 5px;
     text-align: center;
     text-decoration: none;
-    width:320px;
 }
 
 .menu:hover .lenyiltmenu{
