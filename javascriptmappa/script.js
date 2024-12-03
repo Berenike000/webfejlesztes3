@@ -42,21 +42,11 @@ const descriptionlista = [
   "A győztes jutalma hírnév. A vesztes büntetése halál. A közeljövő egy sötét világában tizenkét fiú és tizenkét lány küzd egymással egy élő televíziós show-ban, aminek a címe Az éhezők viadala. Egyetlen szabály van: ölj vagy megölnek. Amikor a tizenhat éves Katniss Everdeen a húgát mentve önként jelentkezik, hogy részt vegyen a viadalon, az felér egy halálos ítélettel. De Katniss már nem fél a haláltól. A túlélés a vérében van."
 ]
 
-const sorozate = document.getElementById("sorozattagja").checked
-const kortarse = document.getElementById("kortars").checked
-const humorose = Number(document.getElementById("humorose").value)
-const urutazas = document.getElementById("urutaz").checked
-const tarskritika = document.getElementById("tarskrit").checked
-const idoutazas = document.getElementById("idoutaz").checked
-const ufo = document.getElementById("ufo").checked
-const ai = document.getElementById("ai").checked
-const tudomanyos = document.getElementById("tudomanyos").checked
-const disztopia = document.getElementById("disz").checked
-const posztapok = document.getElementById("poszta").checked
-const uropera = document.getElementById("urop").checked
-const krimi = document.getElementById("krimi").checked
-
 document.getElementById("ajanlogomb").addEventListener("click", konyvajanlas)
+
+
+
+
 //Array.includes()
 //fruits.push("Lemon");  // Adds a new element (Lemon) to fruits 
 
@@ -65,7 +55,23 @@ const kiiras = [];
 let kellrandom = false;
 
 function konyvajanlas(){
+  const sorozate = document.getElementById("sorozatttt").checked
+  const kortarse = document.getElementById("kortars").checked
+  const humorose = Number(document.getElementById("humoros").value)
+  const urutazas = document.getElementById("urutaz").checked
+  const tarskritika = document.getElementById("tarskrit").checked
+  const idoutazas = document.getElementById("idoutaz").checked
+  const ufo = document.getElementById("foldonkiv").checked
+  const ai = document.getElementById("aivan").checked
+  const tudomanyos = document.getElementById("tudomanyos").checked
+  const disztopia = document.getElementById("disz").checked
+  const posztapok = document.getElementById("poszta").checked
+  const uropera = document.getElementById("urop").checked
+  const krimi = document.getElementById("krimi").checked
+  document.getElementById("konyvajanlaskiiras").innerHTML= "xxxxxx"
   if(sorozate==true){
+    document.getElementById("konyvajanlaskiiras").innerHTML= "sorozat"
+
 
       if(kortarse == true){
         //sorozat és kortárs is 
@@ -152,58 +158,18 @@ function konyvajanlas(){
     }
   }
 
-  if(kellrandom){
+  if(kellrandom ==true){
     // Returns a random integer from 0 to 16:
     randomszam = Math.floor(Math.random() * 16);
-    kiiras = "Sajnos nem találtunk Önnek a választásainak megfelelő könyvajánlást, így választottunk Önnek egy véletlenszerű olvasmányt!" + lista[randomszam] + descriptionlista[randomszam]
+    kiiras = "<p>Sajnos nem találtunk Önnek a választásainak megfelelő könyvajánlást, így választottunk Önnek egy véletlenszerű olvasmányt!<p>" + lista[randomszam] + "<br>" + descriptionlista[randomszam];
   }
   else{ 
-    kiiras = "Az Ön számára választott olvasmány(ok): "
+    kiiras = "<p>Az Ön számára választott olvasmány(ok): </p>"
     for(i=0; i<eredmeny.length; i++){
-      kiiras = kiiras + lista[eredmeny[i]] + descriptionlista[eredmeny[i]]
+      kiiras = kiiras + lista[eredmeny[i]] + "<br>" +  descriptionlista[eredmeny[i]];
     }
   }
-document.getElementById("konyvajanlaskiiras").innerHTML= "xxxxxx"
-  document.getElementById("konyvajanlaskiiras").innerHTML = kiiras
+document.getElementById("konyvajanlaskiiras").innerHTML= "xxxxxx";
+  document.getElementById("konyvajanlaskiiras").innerHTML = kiiras;
 
 }
-
-
-
-
-
-$(document).ready(function(){
-    //http://www.sitepoint.com/basic-jquery-form-validation-tutorial/
-    $("#kerdoiv").validate({
-      rules: {
-        nev: "required",
-        emailcim: {
-          required: true,
-          email: true
-         },
-        jelszo: {
-          required: true,
-          minlength: 5
-         },
-        jelszo2: {
-            required: true,
-            minlength: 5
-           },
-        idoutazas: "required",
-        },
-
-      messages: {
-         nev: " Írd be a neved!",
-         emailcim: " Kérlek valós email címet adj meg!",
-         jelszo: {
-          required: " Add meg a jelszavad!",
-          minlength: " A jelszavad legalább 5 karakter hosszú legyen!"
-         },
-         jelszo2: {
-          required: " Add meg a jelszavad!",
-          minlength: " A jelszavad legalább 5 karakter hosszú legyen!"
-         },
-         idoutazas: " Kérem adjon meg egy évet!"
-        },
-       });
-     })

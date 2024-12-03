@@ -154,34 +154,42 @@
                 <h2>Könyvajánló</h2>
                 <p>Szereti a science-fictiont, és nem tudja, mit o      lvasson legközelebb? Ne aggódjon: töltse ki ezt a rövid tesztet, és kiválasztunk Önnek egy, a választásaihoz passzoló olvasmány!</p>
 
-                <p id="sorozattagja">Legyen a könyv egy sorozat tagja?</p>
-                    <input type="radio" name="sorozattagja" id="sorozattagja">Igen<br>
-                    <input type="radio" name="sorozattagja" id="nemsorozat">Nem<br>
+                <label>Legyen a könyv egy sorozat tagja?</label><br>
+                    <label><input type="radio" name="sorozattagja" id="sorozatttt">Igen</label><br>
+                    <label><input type="radio" name="sorozattagja" id="nemsorozat">Nem</label><br>
 
-                    <p>Kortárs mű legyen, vagy klasszikus?</p>
-                    <input type="radio" name="korklassz" id="kortars">Kortárs<br>
-                    <input type="radio" name="korklassz" id="klasszikus">Klasszikus<br>
+                    <p></p>
 
-                    <p>Inkább komorabb vagy humorosabb legyen?</p>
-                    Komor<input type="range" id="humorose" min="1" max="10">Humoros
+                    <label>Kortárs mű legyen, vagy klasszikus?</label><br>
+                    <label><input type="radio" name="korklassz" id="kortars">Kortárs</label><br>
+                    <label><input type="radio" name="korklassz" id="klasszikus">Klasszikus</label><br>
 
-                    <p>Legyen benne?</p>
-                    <input type="checkbox" name="urutaz" id="urutaz">Űrutazás<br>
-                    <input type="checkbox" name="tarskrit" id="tarskrit">Társadalomkritika<br>
-                    <input type="checkbox" name="idoutaz" id="idoutaz">Időutazás<br>
-                    <input type="checkbox" name="ufo" id="ufo">Földönkívüliek<br>
-                    <input type="checkbox" n
-                    ame="ai" id="ai">Mesterséges intelligencia  
+                    <p></p>
+
+                    <label for="humoroskomor">Inkább komorabb vagy humorosabb legyen?</label>
+                    Komor<input type="range" id="humoros" min="1" max="10">Humoros
+
+                    <p></p>
+
+                    <label for="legyenbenne">Legyen benne?</label><br>
+                    <label><input type="checkbox" name="urutaz" id="urutaz">Űrutazás</label><br>
+                    <label><input type="checkbox" name="tarskrit" id="tarskrit">Társadalomkritika</label><br>
+                    <label><input type="checkbox" name="idoutaz" id="idoutaz">Időutazás</label><br>
+                    <label><input type="checkbox" name="foldonkiv" id="foldonkiv">Földönkívüliek</label><br>
+                    <label><input type="checkbox" n
+                    ame="aivan" id="aivan">Mesterséges intelligencia</label>  
                     <br>
-                    <input type="checkbox" n
-                    ame="tudomanyos" id="tudomanyos">Tudományos leírás 
+                    <label><input type="checkbox" n
+                    ame="tudomanyos" id="tudomanyos">Tudományos leírás </label>
                     <br>
 
-                    <p>Milyen jellegű legyen?</p>
-                    <input type="checkbox" name="disz" id="disz">Disztópikus<br>
-                    <input type="checkbox" name="poszta" id="poszta">Posztapokaliptikus<br>
-                    <input type="checkbox" name="urop" id="urop">Űropea<br>
-                    <input type="checkbox" name="krimi" id="krimi">Krimi/horror<br>
+                    <p></p>
+
+                    <label for="jelleg">Milyen jellegű legyen?</label><br>
+                    <label><input type="checkbox" name="disz" id="disz">Disztópikus</label><br>
+                    <label><input type="checkbox" name="poszta" id="poszta">Posztapokaliptikus</label><br>
+                    <label><input type="checkbox" name="urop" id="urop">Űropea</label><br>
+                    <label><input type="checkbox" name="krimi" id="krimi">Krimi/horror</label><br>
             <p></p>
                 <button id="ajanlogomb">Kész vagyok!</button>
 
