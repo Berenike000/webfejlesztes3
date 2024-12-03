@@ -24,9 +24,9 @@ body {
 }
 
 .flexcontainer {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    display: flex;
 }
 
 .flexcontainer>* {
@@ -83,17 +83,23 @@ li{
     list-style-type: none;
 }
 
-.temak{
-    font-size: 1.15em;
-    font-weight: bold;
-    
-}
+
 
 ul a, .elejere{
     font-size: 1.15em;
     color: white;
     font-weight: bold;
     text-decoration: none;
+}
+
+.oldaltartalma, .erdekesseg, .fogalom, .koraimodern, .fotipus, .tobbtipus{
+    flex: 1 1 100%;
+}
+
+.temak{
+    font-size: 1.15em;
+    font-weight: bold;
+    flex: 1 1 100%;
 }
 
 
@@ -106,10 +112,11 @@ footer {
 }
 
 
-
 /*DROPDOWN MENU*/
 .menu{
+    
     position: relative;
+    padding: 20px;
 }
 
 .lenyiltmenu{
@@ -119,8 +126,8 @@ footer {
 }
 
 .lenyiltmenu a{
-    display: block;
-    padding: 7px;
+    display: flex;
+    padding: 7px ;
     margin-bottom: 10px;
     color: black;
     font-weight: bold;
@@ -231,52 +238,54 @@ label.error {
 
 @media all and (min-width: 600px) {
 
-    .flexcontainer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;     }    
-
     .menu{
         display: flex;
         /*position: static;*/
-        
             }
     
     .lenyiltmenu{
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         position: static;
         z-index: 1;      
-        
+       
         }
     
     .lenyiltmenu a{
         display: flex;  
+        flex-basis: 25%; 
         }
     
     .menu:hover .lenyiltmenu{
         display: flex; 
-        flex-basis: 100%; 
-           
- }
+        }
 
     .menugomb{
         display: none;      }
 
         /*INDEX OLDAL*/
-    #tartalom{
-        flex-basis: 64%;    }
 
-    .erdekesseg{
-        flex-basis: 23%;    }
+    
+    .oldaltartalma{
+        flex-basis: 58%;
+    }
+
+    #erdekesseg1{
+        flex-basis: 38%;    }
 
     .fogalom{
-        flex-basis: 73%;    }
+        flex-basis: 100%;    }
 
     .koraimodern{
         flex-basis: 100%;   }
     
     .temak{
-        flex-basis: 73%;      }
+        flex-basis: 64%;      }
+
+    #erdekesseg2{
+        flex-basis: 32%;
+    }
 
     .fotipus{
         flex-basis: 100%;    }
@@ -288,37 +297,63 @@ label.error {
         font-size: 30px;    }
 
         /*MUVEK OLDAL*/
+    
+    .oldaltartalma2{
+        flex-basis: 48%;
+    }
 
     .attekintes{
         flex-basis: 48%;
     }
 
-    .oldaltartalma2{
-        flex-basis: 48%;
-    }
+    
 }
 
 @media all and (min-width: 768px) {
 
-        /*INDEX OLDAL*/
+    .lenyiltmenu{
+        flex-direction: column;
+    }
 
     .oldaltartalma{
-        flex-basis: 23%;
-    }
+        flex-basis: 30%;}
+
+    #erdekesseg1{
+        flex-basis: 25%;    }
+
     .fogalom{
-        flex-basis: 48%;
-    }
+        flex-basis: 28%;    }
 
+    .koraimodern{
+        flex-basis:68%;   }
+    
+    .temak{
+        flex-basis: 64%;      }
+
+    #erdekesseg2{
+        flex-basis: 32%;  }
+
+    table.szoveg{
+        font-size: 30px;    }
+
+    #temaoszlop{
+        columns: 2;}
+     
     .fotipus{
-        flex-basis: 48%;
-    }
-
+        flex-basis: 48%;}
+     
     .tobbtipus{
-        flex-basis: 48%;
-    }
+        flex-basis: 48%;}
+     
 
         /*MUVEK OLDAL*/
-    
+
+    .oldaltartalma2{
+        flex-basis: 30%;
+    }
+    .attekintes{
+        flex-basis: 30%;
+    }
     .film{
         flex-basis: 48%;
     }

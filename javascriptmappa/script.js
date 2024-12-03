@@ -51,7 +51,7 @@ document.getElementById("ajanlogomb").addEventListener("click", konyvajanlas)
 //fruits.push("Lemon");  // Adds a new element (Lemon) to fruits 
 
 const eredmeny = [];
-const kiiras = [];
+let kiiras;
 let kellrandom = false;
 
 function konyvajanlas(){
@@ -70,16 +70,16 @@ function konyvajanlas(){
   const krimi = document.getElementById("krimi").checked
   document.getElementById("konyvajanlaskiiras").innerHTML= "xxxxxx"
   if(sorozate==true){
-    document.getElementById("konyvajanlaskiiras").innerHTML= "sorozat"
-
-
+    
       if(kortarse == true){
         //sorozat és kortárs is 
+        
           if(humorose >= 7){
             //RANDOM SZAM
             kellrandom = true;
           }
           else{
+            
             if(ai==true && tudomanyos==true && posztapok==true && uropera==true) {
               if(!(eredmeny.includes(2))){eredmeny.push(2)}}
 
@@ -157,11 +157,13 @@ function konyvajanlas(){
       }
     }
   }
+  
+
 
   if(kellrandom ==true){
     // Returns a random integer from 0 to 16:
     randomszam = Math.floor(Math.random() * 16);
-    kiiras = "<p>Sajnos nem találtunk Önnek a választásainak megfelelő könyvajánlást, így választottunk Önnek egy véletlenszerű olvasmányt!<p>" + lista[randomszam] + "<br>" + descriptionlista[randomszam];
+    kiiras = "<p>Sajnos nem találtunk Önnek a választásainak megfelelő könyvajánlást, így választottunk Önnek egy véletlenszerű olvasmányt!</p>" + lista[randomszam] + "<br>" + descriptionlista[randomszam] + "<br>";
   }
   else{ 
     kiiras = "<p>Az Ön számára választott olvasmány(ok): </p>"
