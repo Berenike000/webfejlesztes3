@@ -108,7 +108,8 @@ $(document).ready(function(){
          },
         jelszo2: {
             required: true,
-            minlength: 5
+            minlength: 5,
+            equalTo: "#jelszo"
            },
         szereti: "required",
         idoutazas: "required",
@@ -123,7 +124,8 @@ $(document).ready(function(){
          },
          jelszo2: {
           required: " Add meg a jelszavad!",
-          minlength: " A jelszavad legalább 5 karakter hosszú legyen!"
+          minlength: " A jelszavad legalább 5 karakter hosszú legyen!",
+          equalTo: " A két jelszó nem egyezik meg!"
          },
          szereti: "Kérem válasszon egyet!",
          idoutazas: " Kérem adjon meg egy évet!"

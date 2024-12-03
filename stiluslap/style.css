@@ -35,10 +35,6 @@ body {
 }
 
 
-/*p{
-    -webkit-text-stroke-color: #1F4287;
-    -webkit-text-stroke-width: 0.5px;
-}*/
 
 h1, h2, h3{
     text-shadow: 5px 5px 10px rgb(33, 230, 193, 0.9);
@@ -83,8 +79,6 @@ li{
     list-style-type: none;
 }
 
-
-
 ul a, .elejere{
     font-size: 1.15em;
     color: white;
@@ -101,7 +95,6 @@ ul a, .elejere{
     font-weight: bold;
     flex: 1 1 100%;
 }
-
 
 footer {
     /*background-color: #278EA5;*/
