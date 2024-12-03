@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+@font-face{
+    font-family: "sajatbetu"; src: url("../font/Depot.ttf");
+}
+
+body {
+    background-image: url("../kepek/hatter.jpg");
+    background-color:  #0a045e;
+    background-attachment: fixed;
+    padding: 0px;
+    margin: 0px;
+    font-family: "sajatbetu", cursive;
+    /*font-weight: bold;*/
+    font-size: 18px;
+}
+
+.flexcontainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.flexcontainer>* {
+	height: fit-content;
+    margin: 1%;
+}
+
+
+/*p{
+    -webkit-text-stroke-color: #1F4287;
+    -webkit-text-stroke-width: 0.5px;
+}*/
+
+h1, h2, h3{
+    text-shadow: 5px 5px 10px rgb(33, 230, 193, 0.9);
+}
+
+header {
+    padding: 10px;
+    margin: 0 5px;
+    background-color: rgb(0, 0, 0, 0.4);
+    text-align: center;
+    font-size: 25px; 
+    color:white ;
+    border: 3px solid white;
+}
+
+article {
+    flex: 1 1 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 3px 15px;
+    color: white;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+section{
+    padding: 3px;
+    text-indent: 40px;
+}
+
+aside {
+    flex: 1 1 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-size: 0.84em;
+    border-radius: 15px;
+    border: 3px solid white;
+}
+
+li{
+    list-style-type: none;
+}
+
+.temak{
+    font-size: 1.15em;
+    font-weight: bold;
+    
+}
+
+ul a, .elejere{
+    font-size: 1.15em;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+footer {
+    /*background-color: #278EA5;*/
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+
+
+/*DROPDOWN MENU*/
+.menu{
+    position: relative;
+    
+}
+
+.lenyiltmenu{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.lenyiltmenu a{
+    display: block;
+    padding: 7px;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: bold;
+    background-color: #21E6C1;
+    border-radius: 20px 5px;
+    text-align: center;
+    text-decoration: none;
+    width:320px;
+}
+
+.menu:hover .lenyiltmenu{
+    display: block;
+}
+
+.menu a.active {
+    background-color: #1F4287;
+}
+
+.menu a:hover, .menu a.active:hover {
+    background-color: #278EA5;
+}
+
+button{
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    font-family: "sajatbetu";
+    background-color: #21E6C1;
+    color: black;
+    font-weight: bold;
+    text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+#ajanlogomb{
+    width: 200px;
+}
+
+/*FORM*/
+
+label{
+    color: white;
+}
+
+.urlapgomb{
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    font-family: "sajatbetu";
+    background-color: #21E6C1;
+    color: black;
+    font-weight: bold;
+    text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+/*TABLAZAT*/
+
+img.tablazat {
+    height: auto;
+    width:75%;
+    max-width: 500px;
+    margin-top: 8px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    transition: 1s;
+}
+
+img.tablazat:hover{
+    transform: scale(1.2);
+}
+
+td{
+    /*border: 2px solid white;*/
+    text-align: center;
+}
+
+/*GALERIA*/
+
+.slider {
+    width: 80%;
+    min-width: 400px; 
+    margin: 100px auto;
+}
+
+.slick-slide img {width: 100%;}
+
+.slick-prev, .slick-next{
+    color: white;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: white;
+}
+
+.slick-slide {
+    margin: 0px 5px;
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.slick-active { opacity: .5; }
+
+.slick-current { opacity: 1; }
+
+/*KERDOIV VALIDALAS*/
+label.error {
+    color: #FB3A3A; 
+    }
+
+
+@media all and (min-width: 600px) {
+
+    .flexcontainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;     }    
+
+    .menu{
+        display: flex;
+        /*position: static;*/
+        
+            }
+    
+    .lenyiltmenu{
+        display: flex;
+        position: static;
+        z-index: 1;      
+        
+        }
+    
+    .lenyiltmenu a{
+        display: flex;  
+        }
+    
+    .menu:hover .lenyiltmenu{
+        display: flex; 
+        flex-basis: 100%; 
+           
+ }
+
+    .menugomb{
+        display: none;      }
+
+        /*INDEX OLDAL*/
+    #tartalom{
+        flex-basis: 64%;    }
+
+    .erdekesseg{
+        flex-basis: 23%;    }
+
+    .fogalom{
+        flex-basis: 73%;    }
+
+    .koraimodern{
+        flex-basis: 100%;   }
+    
+    .temak{
+        flex-basis: 73%;      }
+
+    .fotipus{
+        flex-basis: 100%;    }
+
+    .tobbtipus{
+        flex-basis: 100%;    }
+
+    table.szoveg{
+        font-size: 30px;    }
+
+        /*MUVEK OLDAL*/
+
+    .attekintes{
+        flex-basis: 48%;
+    }
+
+    .oldaltartalma2{
+        flex-basis: 48%;
+    }
+}
+
+@media all and (min-width: 768px) {
+
+        /*INDEX OLDAL*/
+
+    .oldaltartalma{
+        flex-basis: 23%;
+    }
+    .fogalom{
+        flex-basis: 48%;
+    }
+
+    .fotipus{
+        flex-basis: 48%;
+    }
+
+    .tobbtipus{
+        flex-basis: 48%;
+    }
+
+        /*MUVEK OLDAL*/
+    
+    .film{
+        flex-basis: 48%;
+    }
+    .sorozat{
+        flex-basis: 48%;
+    }
+}

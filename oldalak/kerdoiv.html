@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bagi Bereniké">
+    <meta name="description" content="Ez egy science-fictionről szóló weboldal.">
+    <link rel="stylesheet" href="../stiluslap/style.css">
+    <link rel="icon" href="../kepek/favicon.png" type="image/x-icon">
+
+    <script src="../validalas/jquery-3.7.1.js"></script>
+    <script src="../validalas/jquery-validation-1.19.5/dist/jquery.validate.js"></script>
+
+    <title>A sci-fi története</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="eleje">Kérdőív a tudomyányos-fantasztikus műfajjal kapcsolatban</h1>
+    </header>
+    <div class="flexcontainer">
+        <nav class="menu">        
+            <button class="menugomb">Menü</button>
+            <div class="lenyiltmenu">
+                <a href="index.html">Története</a>
+                <a href="muvek.html">Legfontosabb művei</a>
+                <a class="active" href="#">Kérdőív</a>
+                <a href="galeria.html">Galéria</a>
+            </div>
+        </nav>
+        
+        <article>
+        <p>A következő kérdőív kitöltésével lehetősége van egy felmérésben résztvenni. A felmérés az Olvasóknak a science-fictionnal kapcsolatos véleményét gyűjti össze. Néhány szerencsés kitöltőnk között még egy meglepetés ajándékot is kisorsolunk!</p>
+        <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="kerdoiv" novalidate>
+            <label for="nev">Név: </label>
+            <input type="text" name="nev" id="nev" autofocus> <br>
+
+            <label for="emailcim">E-mail-cím: </label>
+            <input type="email" name="emailcim" id="emailcim"> <br>
+
+            <label for="jelszo">Jelszó:</label>
+            <input type="password" name="jelszo" id="jelszo">
+            <br>
+            <label for="jelszo2">Jelszó2:</label>
+            <input type="password" name="jelszo2" id="jelszo2">
+
+            <p></p>
+
+            <label for="szereti">Szereti a science-fiction filmeket?</label><br>
+            <input type="radio" name="szereti" value="igen">Igen<br>
+            <input type="radio" name="szereti" value="nem">Nem<br>
+
+            <p></p>
+
+            <label for="jellemzo">Ön szerint mik a science-fiction főbb jellemzői?</label>
+            <input type="checkbox" name="jell_ur" value="jell_ur">Az űrben játszódik <br>
+            <input type="checkbox" name="jell_fenyes" value="jell_fenyes">Vannak benne fényes tárgyak<br>
+            <input type="checkbox" name="jell_fight" value="jell_fight">A rossz oldal harcol a jóval<br>
+            <input type="checkbox" name="jell_egyeb" value="jell_egyeb">Egyéb 
+            <input type="text" name="jell_egyeb"> <br>
+
+            <p></p>
+
+            <label for="mufaj">Melyik műfaj áll önhöz a legközelebb?</label>
+            <select>
+                <option selected>Cyberpunk</option>
+                <option>Posztapokaliptikus</option>
+                <option>Steampunk</option>
+                <option>Clockpunk</option>
+                <option>Biopunk</option>
+                <option>Dieselpunk</option>
+                <option>Időutazás</option>
+                <option>Űropera</option>
+                <option>Alternatív történelmi sci-fi</option>
+            </select> <br>
+            <p></p>
+
+
+            <label for="idoutazas">Ha tudna utazni az időben, melyik évet látogatná meg?</label>
+            <input type="number" name="idoutazas" id="idoutazas"><br>
+            <p></p>
+
+            <input class="urlapgomb" type="submit" value="Elküldés" name="kuldes">
+            <input  class="urlapgomb" type="reset" value="Visszaállítás">
+        </form>
+    </article>
+    
+</div>
+
+<article><a class="elejere" href="#eleje">Vissza az elejére</a></article>
+
+    <footer>Ez az oldal gyakorlásra szolgál</footer>
+    <script src="../javascriptmappa/script.js"></script>
+</body>
+
+</HTML>
